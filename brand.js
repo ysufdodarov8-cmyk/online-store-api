@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const { pool } = require("../db/db.js"); 
+const { pool } = require("./db.js"); 
+
 
 router.get("/get-brands", async (req, res) => {
   try {
@@ -68,3 +69,4 @@ router.delete("/delete-brand/:id", async (req, res) => {
 });
 
 module.exports = router;
+
