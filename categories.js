@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const { pool } = require("../db/db.js");
+const { pool } = require("./db.js"); 
+
 router.get("/get-category", async (req, res) => {
   try {
     const result = await pool.query(
@@ -76,3 +77,4 @@ router.delete("/delete-category/:id", async (req, res) => {
 });
 
 module.exports = router;
+
